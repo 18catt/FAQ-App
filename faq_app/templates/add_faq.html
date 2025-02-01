@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New FAQ</title>
+    <style>
+        body { 
+            font-family: Arial, 
+            sans-serif; 
+            padding: 20px; }
+        h1 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form { 
+            max-width: 500px; 
+            margin: auto; 
+        }
+        label, input, textarea { 
+            display: block; 
+            width: 100%; 
+            margin-bottom: 10px; 
+        }
+        button { 
+            padding: 10px 20px; 
+            background-color: rgb(4, 124, 184); 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
+        button:hover { 
+            background-color: rgb(171, 221, 248); 
+        }
+        a {
+            text-decoration: none;
+            color:rgb(4, 124, 184);
+        }
+    </style>
+</head>
+<body>
+    <h1>Add New FAQ</h1>
+    <section>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <a href="{% url 'faq_app:faq_list' %}">Back to FAQs</a>
+    </footer>
+</body>
+</html>
+
