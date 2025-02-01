@@ -8,19 +8,19 @@ This project is a Django-based FAQ management system that supports multiple lang
 # Installation Steps
 Follow the instructions below to get your development environment set up.
 
-###**Prerequisites**
+**Prerequisites**
 Ensure that you have the following installed on your machine:
 
-Python 3.8 or higher
-pip (Python package installer)
-Django 3.0 or higher
-PostgreSQL (or any other preferred database system)
-Clone the Repository
+- Python 3.8 or higher
+- pip (Python package installer)
+- Django 3.0 or higher
+  
+**Clone the Repository**
+```python
 bash
-Copy
-Edit
 git clone https://github.com/your-username/faq-management-system.git
 cd faq-management-system
+```
 Set Up a Virtual Environment
 It's recommended to use a virtual environment to avoid conflicts with system-wide Python packages.
 
