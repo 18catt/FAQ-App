@@ -8,7 +8,7 @@ This project is a Django-based FAQ management system that supports multiple lang
 # Installation Steps
 Follow the instructions below to get your development environment set up.
 
-**Prerequisites**
+###**Prerequisites**
 Ensure that you have the following installed on your machine:
 
 Python 3.8 or higher
