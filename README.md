@@ -21,81 +21,83 @@ bash
 git clone https://github.com/your-username/faq-management-system.git
 cd faq-management-system
 ```
-Set Up a Virtual Environment
+**Set Up a Virtual Environment**
 It's recommended to use a virtual environment to avoid conflicts with system-wide Python packages.
 
+```python
 bash
-Copy
-Edit
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies
-Install all the required packages from requirements.txt.
+```
 
+**Install Dependencies**
+Install all the required packages from `requirements.txt`.
+
+```python
 bash
-Copy
-Edit
 pip install -r requirements.txt
-Set Up the Database
+```
+
+**Set Up the Database**
 Run the following commands to set up your database:
 
-Apply the migrations:
+- Apply the migrations:
 
+```python
 bash
-Copy
-Edit
 python manage.py migrate
-Create a superuser to manage the admin panel:
+```
+- Create a superuser to manage the admin panel:
 
+```python
 bash
-Copy
-Edit
 python manage.py createsuperuser
-Start the Django development server:
+```
 
+-Start the Django development server:
+
+```python
 bash
-Copy
-Edit
 python manage.py runserver
-Access the Application
-Once the server is running, open your browser and go to:
+```
 
+**Access the Application**
+Once the server is running, open your browser and go to:
+```python
 cpp
-Copy
-Edit
 http://127.0.0.1:8000/
+```
 To access the Django admin panel, go to:
 
+```python
 arduino
-Copy
-Edit
 http://127.0.0.1:8000/admin/
+```
 Login using the superuser credentials you created.
 
 # API Usage Examples
 The system provides a simple API to fetch FAQs based on the selected language.
 
-Endpoints
-Get All FAQs
+**Endpoints**
+1. Get All FAQs
 
-URL: /api/faqs/
+URL: `/api/faqs/`
 
-Method: GET
+Method: `GET`
 
 Query Parameters:
 
-lang: The language in which the FAQs are required. Supported values: en, hi, bn. Defaults to en.
+- `lang`: The language in which the FAQs are required. Supported values: `en`, `hi`, `bn`. Defaults to `en`.
 Example Request:
 
+```python
 bash
-Copy
-Edit
 curl -X GET "http://127.0.0.1:8000/api/faqs/?lang=hi"
+```
 Example Response:
 
+```json
 json
-Copy
-Edit
 {
     "faqs": [
         {
@@ -110,23 +112,23 @@ Edit
         }
     ]
 }
-Get a Single FAQ
+```
+2. Get a Single FAQ
 
-URL: /api/faqs/{faq_id}/
+URL: `/api/faqs/{faq_id}/`
 
-Method: GET
+Method: `GET`
 
 Example Request:
 
+```python
 bash
-Copy
-Edit
 curl -X GET "http://127.0.0.1:8000/api/faqs/1/"
+```
 Example Response:
 
+```json
 json
-Copy
-Edit
 {
     "id": 1,
     "question_en": "What is Django?",
@@ -136,3 +138,4 @@ Edit
     "question_bn": "Django কি?",
     "answer_bn": "Django একটি ওয়েব ফ্রেমওয়ার্ক।"
 }
+```
