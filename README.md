@@ -1,14 +1,14 @@
 # FAQ-App
 This project is a Django-based FAQ management system that supports multiple languages (English, Hindi, and Bengali).
 # Features
-Multi-Language Support for FAQs (English, Hindi, Bengali).
-WYSIWYG Editor for rich-text formatting in FAQ answers.
-CRUD Operations for managing FAQs via the admin interface.
-API Integration for fetching FAQs in different languages.
+- Multi-Language Support for FAQs (English, Hindi, Bengali).
+- WYSIWYG Editor for rich-text formatting in FAQ answers.
+- CRUD Operations for managing FAQs via the admin interface.
+- API Integration for fetching FAQs in different languages.
 # Installation Steps
 Follow the instructions below to get your development environment set up.
 
-Prerequisites
+**Prerequisites**
 Ensure that you have the following installed on your machine:
 
 Python 3.8 or higher
